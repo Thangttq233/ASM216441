@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <style>
+        body {
+            background-color: #ff0000; /* Màu đỏ */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff; /* Màu chữ trắng */
+        }
+        a {
+            color: #fff; /* Màu chữ trắng cho liên kết */
+            text-decoration: none; /* Loại bỏ đường gạch chân liên kết */
+            margin: 10px;
+        }
+        a:hover {
+            text-decoration: underline; /* Gạch chân liên kết khi di chuột qua */
+        }
+        h1, p {
+            text-align: center;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #fff; /* Đường viền màu trắng */
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="/users/logout">Log Out</a>
+    <h1><%= title %></h1>
+    <p>Welcome <%= uname %></p>
+    <table>
+        <%- user_cells %>
+    </table>
+</body>
+</html>
